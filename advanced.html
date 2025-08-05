@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            display: flex;
+            margin: 50px;
+            justify-content: flex-end;
+        }
+
+        a{
+            text-decoration: none;
+            padding: 10px;
+            font-size: 20px;
+            color: rgb(75, 72, 72);
+        }
+
+        img{
+            width: 350px;
+            margin-bottom: 30px;
+        }
+        #main{
+            display: flex;
+            align-items:  center;
+            flex-direction: column;
+            margin: 50px;
+        }
+        .search{
+            
+            width: 400px;
+            padding: 5px;
+            margin-left:10px;
+            
+        }
+        .submit{
+            padding: 14px 10px 14px 10px;
+            width: 125px;
+            border-radius: 70px;
+            margin: 10px;
+            cursor: pointer;
+
+        }
+
+       
+       
+        form{
+            display: flex;
+            flex-direction: column;
+            ;
+        }
+
+        #submit-buttons{
+            display: flex;
+            margin: 10px;
+            justify-content: center;
+        }
+
+    .advanced{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+    }
+    .field{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+    }
+
+
+     @media (max-width: 480px) {
+        .field {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .field label {
+            flex: none;
+            white-space: normal;
+            margin-bottom: 5px;
+        }
+
+        .field input.search {
+            width: 100%;
+        }
+    }
+
+        
+    </style>
+</head>
+<body>
+
+     <nav>
+        <a href="index.html">Google Search</a>
+    </nav>
+    <div id="main">
+        <img src="google-logo-png-google-sva-scholarship-20.png" alt="google logo" >
+        <form action="https://www.google.com/search" method="GET">
+            <div class="advanced">
+                    <div class="field">
+                        <label for="field1">All these words:</label>
+                        <input type="text"  id="field1" value=""  name="as_q" class="search">
+                    </div>
+                    <div class="field">
+                        <label for="field2">This exact word or phrase: </label>
+                        <input type="text"  id="field2" value=""  name="as_epq" class="search">
+                    </div>
+                    <div class="field">
+                        <label for="field3">Any of this words: </label>
+                        <input type="text"  id="field3" value=""  name="as_oq" class="search">
+                    </div>
+            
+                    <div class="field">
+                        <label for="field4">None of these words: </label>
+                        <input type="text"  id="field4" value=""  name="as_eq" class="search">
+                    </div>
+
+            </div>
+           
+            <div id="submit-buttons">
+                <input type="submit"  value="Advanced Search" class="submit"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
